@@ -1,5 +1,5 @@
 //
-//  APIs.swift
+//  CustomerDisplayItem.swift
 //  SwiftMilestones
 //
 //  Created by Vinesh Mistry on 16/10/2018.
@@ -7,8 +7,7 @@
 //
 
 import Foundation
-
-enum APIs: String {
-    case allProfiles = "localhost:8080/getAllProfiles"
-    case base = "http://localhost:8080"
+struct CustomerDisplayItem {
+    let firstName: String
+    let lastName: String
 }

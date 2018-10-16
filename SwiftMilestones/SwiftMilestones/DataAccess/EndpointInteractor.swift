@@ -29,7 +29,7 @@ class EndpointInteractor {
     
     func retrieveProfiles() -> [CustomerProfile] {
         var customerList: [CustomerProfile] = [CustomerProfile]()
-        let url = URL(string: "http://localhost:8080/getAllProfiles")
+        let url = URL(string: APIs.allProfiles.rawValue)
         var jsonData: Data?
         do {
             jsonData = try Data(contentsOf: url!)

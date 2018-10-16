@@ -29,6 +29,7 @@
 		A50C52262176295B00D52EB2 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C52252176295B00D52EB2 /* Address.swift */; };
 		A50C52292176297E00D52EB2 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C52282176297E00D52EB2 /* APIs.swift */; };
 		A50C522B217629C500D52EB2 /* EndpointInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C522A217629C500D52EB2 /* EndpointInteractor.swift */; };
+		A50C522D217630AC00D52EB2 /* CustomerDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C522C217630AC00D52EB2 /* CustomerDisplayItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		A50C52252176295B00D52EB2 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		A50C52282176297E00D52EB2 /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		A50C522A217629C500D52EB2 /* EndpointInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointInteractor.swift; sourceTree = "<group>"; };
+		A50C522C217630AC00D52EB2 /* CustomerDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDisplayItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				A50C520D2176280E00D52EB2 /* CustomerListInteractor.swift */,
 				A50C520E2176280E00D52EB2 /* CustomerListViewController.xib */,
 				A50C52102176280E00D52EB2 /* CustomerListWireframe.swift */,
+				A50C522C217630AC00D52EB2 /* CustomerDisplayItem.swift */,
 			);
 			path = CustomerList;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				A50C521B2176287300D52EB2 /* EventHandler.swift in Sources */,
 				A50C51D92176247A00D52EB2 /* AppDelegate.swift in Sources */,
 				A50C52112176280E00D52EB2 /* CustomerListInterfaces.swift in Sources */,
+				A50C522D217630AC00D52EB2 /* CustomerDisplayItem.swift in Sources */,
 				A50C52202176291100D52EB2 /* CustomerProfile.swift in Sources */,
 				A50C52142176280E00D52EB2 /* CustomerListViewController.swift in Sources */,
 				A50C52292176297E00D52EB2 /* APIs.swift in Sources */,

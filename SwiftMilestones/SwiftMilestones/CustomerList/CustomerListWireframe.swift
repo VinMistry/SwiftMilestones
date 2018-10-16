@@ -13,4 +13,9 @@ class CustomerListWireframe: CustomerListWireframeInput {
     weak var viewController: UIViewController?
     weak var output: CustomerListWireframeOutput?
     
+    func showCustomerDetails() {
+        
+    }
+    
+    
 }

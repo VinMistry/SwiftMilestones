@@ -15,6 +15,7 @@ class CustomerListViewController: UIViewController {
     var customerProfileList = [CustomerProfile]()
     private let rowHeight: CGFloat = 175.5
     
+    //MARK: Initialisers
     init(eventHandler: EventHandler, nibName: String? = nil) {
         self.eventHandler = eventHandler
         super.init(nibName: nil, bundle: nil)
@@ -40,7 +41,10 @@ class CustomerListViewController: UIViewController {
 }
 
 extension CustomerListViewController: CustomerListView {
-    
+    func setScreenTitle(with title: String) {
+        
+    }
+
 }
 
 extension CustomerListViewController:  UITableViewDelegate, UITableViewDataSource  {

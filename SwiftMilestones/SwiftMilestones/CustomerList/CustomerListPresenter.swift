@@ -16,7 +16,7 @@ class CustomerListPresenter {
     let defaultWireframe: Wireframe?
     
     weak var view: CustomerListView?
-
+    
     init(wireframe: CustomerListWireframeInput,
          interactor: CustomerListInteractorInput) {
         
@@ -28,13 +28,33 @@ class CustomerListPresenter {
 }
 
 extension CustomerListPresenter: CustomerListEventHandler {
+    func viewDidLoad() {
+        
+    }
+    
     
 }
 
 extension CustomerListPresenter: CustomerListInteractorOutput {
+    func fetchedCustomerProfiles(customerProfile: [CustomerProfile]) {
+        var profiles = [CustomerDisplayItem]()
+        for profile in customerProfile {
+            profiles.append(CustomerDisplayItem(firstName: profile.customer.firstName, lastName: profile.customer.lastName))
+        }
+        
+    }
+    
+    func customerProfileFetchFailed() {
+        
+    }
+    
     
 }
 
 extension CustomerListPresenter: CustomerListWireframeOutput {
+    func customerProfileAdded() {
+        
+    }
+    
     
 }
