@@ -14,11 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = CustomerListModule().build()
-        self.window?.rootViewController = UINavigationController(rootViewController: viewController)
+        let navController = UINavigationController(rootViewController: viewController)
+        navController.navigationBar.barTintColor = .black
+        navController.navigationBar.isTranslucent = false
+        self.window?.rootViewController = navController
         self.window?.makeKeyAndVisible()
         return true
     }

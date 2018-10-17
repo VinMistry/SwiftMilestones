@@ -30,6 +30,7 @@ class CustomerListViewController: UIViewController {
         self.view.addSubview(tableView)
         setUpTableView()
         eventHandler.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func setUpTableView(){
@@ -40,7 +41,7 @@ class CustomerListViewController: UIViewController {
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = rowHeight
     }
 }
@@ -48,16 +49,14 @@ class CustomerListViewController: UIViewController {
 extension CustomerListViewController: CustomerListView {
     
     func setScreenTitle(with title: String) {
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = textAttributes
         self.title = title
     }
     
     func passDisplayItems(displayItems: [CustomerDisplayItem]) {
         customerDisplayItemList =  displayItems
-        tableView.reloadData()
     }
-    
-    
-
 }
 
 extension CustomerListViewController:  UITableViewDelegate, UITableViewDataSource  {

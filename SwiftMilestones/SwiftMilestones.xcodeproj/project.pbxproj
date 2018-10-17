@@ -273,13 +273,16 @@
 				TargetAttributes = {
 					A50C51D42176247A00D52EB2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					A50C51E82176247B00D52EB2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = A50C51D42176247A00D52EB2;
 					};
 					A50C51F32176247B00D52EB2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = A50C51D42176247A00D52EB2;
 					};
 				};
@@ -535,7 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinesh.SwiftMilestones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -553,7 +556,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinesh.SwiftMilestones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -573,7 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinesh.SwiftMilestonesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftMilestones.app/SwiftMilestones";
 			};
@@ -594,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinesh.SwiftMilestonesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftMilestones.app/SwiftMilestones";
 			};
@@ -614,7 +617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinesh.SwiftMilestonesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SwiftMilestones;
 			};
@@ -634,7 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinesh.SwiftMilestonesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SwiftMilestones;
 			};
