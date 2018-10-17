@@ -8,7 +8,7 @@
 
 import Foundation
 public struct CustomerProfile: Codable, Equatable {
-    
+    let id: String
     var customer: Customer
     var address: Address
     var car: Car

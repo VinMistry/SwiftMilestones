@@ -70,12 +70,15 @@ extension CustomerListViewController:  UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         var firstName : String
+        var lastName: String
         if !customerDisplayItemList.isEmpty {
             firstName = customerDisplayItemList[indexPath.row].firstName
+            lastName = customerDisplayItemList[indexPath.row].lastName
         } else {
             firstName = ""
+            lastName = ""
         }
-        cell.textLabel?.text = firstName
+        cell.textLabel?.text = "\(firstName) \(lastName)"
         return cell
     }
 }
