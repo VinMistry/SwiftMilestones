@@ -10,13 +10,13 @@ import UIKit
 
 class CustomerListViewController: UIViewController {
     //MARK: Constants
-    let eventHandler: EventHandler
+    let eventHandler: CustomerListEventHandler
     let tableView = UITableView()
-    var customerProfileList = [CustomerProfile]()
+    var customerDisplayItemList = [CustomerDisplayItem]()
     private let rowHeight: CGFloat = 175.5
     
     //MARK: Initialisers
-    init(eventHandler: EventHandler, nibName: String? = nil) {
+    init(eventHandler: CustomerListEventHandler, nibName: String? = nil) {
         self.eventHandler = eventHandler
         super.init(nibName: nil, bundle: nil)
     }
@@ -28,6 +28,11 @@ class CustomerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(tableView)
+        setUpTableView()
+        eventHandler.viewDidLoad()
+    }
+    
+    private func setUpTableView(){
         tableView.dataSource = self
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,25 +46,33 @@ class CustomerListViewController: UIViewController {
 }
 
 extension CustomerListViewController: CustomerListView {
+    
     func setScreenTitle(with title: String) {
-        
+        self.title = title
     }
+    
+    func passDisplayItems(displayItems: [CustomerDisplayItem]) {
+        customerDisplayItemList =  displayItems
+        tableView.reloadData()
+    }
+    
+    
 
 }
 
 extension CustomerListViewController:  UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if customerProfileList.isEmpty {
+        if customerDisplayItemList.isEmpty {
             return 1
         }
-        return customerProfileList.count
+        return customerDisplayItemList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         var firstName : String
-        if !customerProfileList.isEmpty {
-            firstName = customerProfileList[indexPath.row].customer.firstName
+        if !customerDisplayItemList.isEmpty {
+            firstName = customerDisplayItemList[indexPath.row].firstName
         } else {
             firstName = ""
         }

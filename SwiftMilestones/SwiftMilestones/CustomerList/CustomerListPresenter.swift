@@ -29,7 +29,8 @@ class CustomerListPresenter {
 
 extension CustomerListPresenter: CustomerListEventHandler {
     func viewDidLoad() {
-        
+        view?.setScreenTitle(with: "Customer List")
+        interactor.fetchCustomerProfiles()
     }
     
     
@@ -41,7 +42,7 @@ extension CustomerListPresenter: CustomerListInteractorOutput {
         for profile in customerProfile {
             profiles.append(CustomerDisplayItem(firstName: profile.customer.firstName, lastName: profile.customer.lastName))
         }
-        
+        view?.passDisplayItems(displayItems: profiles)
     }
     
     func customerProfileFetchFailed() {
