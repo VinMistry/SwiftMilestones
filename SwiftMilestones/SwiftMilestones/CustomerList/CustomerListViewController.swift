@@ -31,6 +31,14 @@ class CustomerListViewController: UIViewController {
         setUpTableView()
         eventHandler.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        let addCustomerButton = UIBarButtonItem(title: "🚹 Add Customer", style: .plain, target: self, action: #selector(addTapped))
+        addCustomerButton.tintColor = .white
+        self.navigationItem.rightBarButtonItem = addCustomerButton
+    }
+    
+    
+    @objc private func addTapped() {
+        print("Hello")
     }
     
     private func setUpTableView(){
@@ -48,9 +56,14 @@ class CustomerListViewController: UIViewController {
 
 extension CustomerListViewController: CustomerListView {
     
-    func setScreenTitle(with title: String) {
-        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+    func navbarTitleTextAttributes(colorOfText: UIColor) {
+        let textAttributes = [NSAttributedString.Key.foregroundColor: colorOfText]
         self.navigationController?.navigationBar.largeTitleTextAttributes = textAttributes
+        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+    }
+    
+    func setScreenTitle(with title: String) {
+        navbarTitleTextAttributes(colorOfText: .white)
         self.title = title
     }
     
@@ -69,6 +82,7 @@ extension CustomerListViewController:  UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.accessoryType = .disclosureIndicator
         var firstName : String
         var lastName: String
         if !customerDisplayItemList.isEmpty {
@@ -78,7 +92,7 @@ extension CustomerListViewController:  UITableViewDelegate, UITableViewDataSourc
             firstName = ""
             lastName = ""
         }
-        cell.textLabel?.text = "\(firstName) \(lastName)"
+        cell.textLabel?.text = "👤   \(firstName) \(lastName)"
         return cell
     }
 }

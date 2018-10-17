@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = CustomerListModule().build()
         let navController = UINavigationController(rootViewController: viewController)
-        navController.navigationBar.barTintColor = .black
         navController.navigationBar.isTranslucent = false
+        navController.navigationBar.barStyle = .black
         self.window?.rootViewController = navController
         self.window?.makeKeyAndVisible()
         return true
