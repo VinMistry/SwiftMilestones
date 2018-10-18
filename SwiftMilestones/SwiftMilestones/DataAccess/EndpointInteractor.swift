@@ -45,4 +45,34 @@ class EndpointInteractor {
         return customerList
     }
     
+    
+    func addProfile(customerProfile: CustomerProfile) -> ResponseHandler {
+        var customerID = ""
+        var responseReturned = 0
+        guard let url = URL(string: APIs.addProfile.rawValue) else { return ResponseHandler(responseCode: 0, customerID: "")}
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let objectAsJson = try? JSONEncoder().encode(customerProfile)
+        request.httpBody = objectAsJson
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse{
+                print(response.allHeaderFields)
+                responseReturned = response.statusCode
+            }
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                    customerID = String(data: data , encoding: String.Encoding.utf8)!
+                }
+                catch {
+                    print(error)
+                }
+            }
+            }.resume()
+        
+        return ResponseHandler(responseCode: responseReturned, customerID: customerID)
+    }
 }

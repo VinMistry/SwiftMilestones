@@ -36,6 +36,7 @@
 		A510E528217772330043E5EE /* AddCustomerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510E520217772330043E5EE /* AddCustomerInteractor.swift */; };
 		A510E529217772330043E5EE /* AddCustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A510E521217772330043E5EE /* AddCustomerViewController.xib */; };
 		A510E52B217772330043E5EE /* AddCustomerWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510E523217772330043E5EE /* AddCustomerWireframe.swift */; };
+		A563E1FD2178857E00AF74AB /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A563E1FC2178857E00AF74AB /* ResponseHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		A510E520217772330043E5EE /* AddCustomerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerInteractor.swift; sourceTree = "<group>"; };
 		A510E521217772330043E5EE /* AddCustomerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCustomerViewController.xib; sourceTree = "<group>"; };
 		A510E523217772330043E5EE /* AddCustomerWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerWireframe.swift; sourceTree = "<group>"; };
+		A563E1FC2178857E00AF74AB /* ResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			children = (
 				A50C52282176297E00D52EB2 /* APIs.swift */,
 				A50C522A217629C500D52EB2 /* EndpointInteractor.swift */,
+				A563E1FC2178857E00AF74AB /* ResponseHandler.swift */,
 			);
 			path = DataAccess;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				A50C52132176280E00D52EB2 /* CustomerListPresenter.swift in Sources */,
 				A50C51DB2176247A00D52EB2 /* ViewController.swift in Sources */,
 				A50C52222176293100D52EB2 /* Customer.swift in Sources */,
+				A563E1FD2178857E00AF74AB /* ResponseHandler.swift in Sources */,
 				A50C52242176294400D52EB2 /* Car.swift in Sources */,
 				A50C52182176280E00D52EB2 /* CustomerListWireframe.swift in Sources */,
 				A50C52262176295B00D52EB2 /* Address.swift in Sources */,

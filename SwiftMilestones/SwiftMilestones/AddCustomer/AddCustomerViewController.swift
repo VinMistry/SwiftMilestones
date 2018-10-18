@@ -14,6 +14,9 @@ class AddCustomerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Add Profile"
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.navigationBar.backItem?.hidesBackButton = true
     }
     
     //MARK: Initialisers

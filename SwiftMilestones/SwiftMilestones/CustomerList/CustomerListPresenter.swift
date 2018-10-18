@@ -28,13 +28,15 @@ class CustomerListPresenter {
 }
 
 extension CustomerListPresenter: CustomerListEventHandler {
+    
     func viewDidLoad() {
         view?.setScreenTitle(with: "Customer List")
         interactor.fetchCustomerProfiles()
-        
     }
     
-    
+    func addProfileButtonTapped() {
+        wireframe.addCustomerDetails()
+    }
 }
 
 extension CustomerListPresenter: CustomerListInteractorOutput {

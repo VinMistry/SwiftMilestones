@@ -16,6 +16,7 @@ protocol CustomerListView: class {
 
 protocol CustomerListEventHandler: EventHandler {
     func viewDidLoad()
+    func addProfileButtonTapped()
 }
 
 protocol CustomerListInteractorInput: class {
@@ -29,6 +30,7 @@ protocol CustomerListInteractorOutput: class {
 
 protocol CustomerListWireframeInput: Wireframe {
     func showCustomerDetails()
+    func addCustomerDetails()
 }
 
 protocol CustomerListWireframeOutput: class {

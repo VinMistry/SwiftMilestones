@@ -17,5 +17,9 @@ class CustomerListWireframe: CustomerListWireframeInput {
         
     }
     
+    func addCustomerDetails() {
+        viewController?.navigationController?.pushViewController(AddCustomerModule().build(), animated: true)
+    }
+    
     
 }

@@ -11,4 +11,5 @@ import Foundation
 enum APIs: String {
     case allProfiles = "http://localhost:8080/getAllProfiles"
     case base = "http://localhost:8080"
+    case addProfile = "http://localhost:8080/addProfile"
 }

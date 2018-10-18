@@ -31,14 +31,18 @@ class CustomerListViewController: UIViewController {
         setUpTableView()
         eventHandler.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        let addCustomerButton = UIBarButtonItem(title: "🚹 Add Customer", style: .plain, target: self, action: #selector(addTapped))
-        addCustomerButton.tintColor = .white
+        let addCustomerButton = UIBarButtonItem(title: "Add Customer", style: .plain, target: self, action: #selector(addTapped))
+        addCustomerButton.tintColor = .green
         self.navigationItem.rightBarButtonItem = addCustomerButton
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
     
     @objc private func addTapped() {
         print("Hello")
+        eventHandler.addProfileButtonTapped()
     }
     
     private func setUpTableView(){
@@ -60,6 +64,7 @@ extension CustomerListViewController: CustomerListView {
         let textAttributes = [NSAttributedString.Key.foregroundColor: colorOfText]
         self.navigationController?.navigationBar.largeTitleTextAttributes = textAttributes
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func setScreenTitle(with title: String) {
