@@ -147,7 +147,7 @@
 				A50C52272176296900D52EB2 /* DataAccess */,
 				A50C521E217628D200D52EB2 /* Models */,
 				A50C52192176285900D52EB2 /* Defaults */,
-				A50C5208217627DD00D52EB2 /* CustomerList */,
+				A50C5208217627DD00D52EB2 /* CustomerListModule */,
 				A50C51D82176247A00D52EB2 /* AppDelegate.swift */,
 				A50C51DA2176247A00D52EB2 /* ViewController.swift */,
 				A50C51DC2176247A00D52EB2 /* Main.storyboard */,
@@ -176,7 +176,7 @@
 			path = SwiftMilestonesUITests;
 			sourceTree = "<group>";
 		};
-		A50C5208217627DD00D52EB2 /* CustomerList */ = {
+		A50C5208217627DD00D52EB2 /* CustomerListModule */ = {
 			isa = PBXGroup;
 			children = (
 				A50C52092176280E00D52EB2 /* CustomerListInterfaces.swift */,
@@ -187,7 +187,7 @@
 				A50C52102176280E00D52EB2 /* CustomerListWireframe.swift */,
 				A50C522C217630AC00D52EB2 /* CustomerDisplayItem.swift */,
 			);
-			path = CustomerList;
+			path = CustomerListModule;
 			sourceTree = "<group>";
 		};
 		A50C52192176285900D52EB2 /* Defaults */ = {

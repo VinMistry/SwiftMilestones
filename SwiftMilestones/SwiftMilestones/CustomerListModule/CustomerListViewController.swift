@@ -60,15 +60,7 @@ class CustomerListViewController: UIViewController {
 
 extension CustomerListViewController: CustomerListView {
     
-    func navbarTitleTextAttributes(colorOfText: UIColor) {
-        let textAttributes = [NSAttributedString.Key.foregroundColor: colorOfText]
-        self.navigationController?.navigationBar.largeTitleTextAttributes = textAttributes
-        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
     func setScreenTitle(with title: String) {
-        navbarTitleTextAttributes(colorOfText: .white)
         self.title = title
     }
     
