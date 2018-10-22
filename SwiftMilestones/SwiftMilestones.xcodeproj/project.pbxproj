@@ -34,8 +34,11 @@
 		A510E526217772330043E5EE /* AddCustomerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510E51E217772330043E5EE /* AddCustomerPresenter.swift */; };
 		A510E527217772330043E5EE /* AddCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510E51F217772330043E5EE /* AddCustomerViewController.swift */; };
 		A510E528217772330043E5EE /* AddCustomerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510E520217772330043E5EE /* AddCustomerInteractor.swift */; };
-		A510E529217772330043E5EE /* AddCustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A510E521217772330043E5EE /* AddCustomerViewController.xib */; };
+		A510E529217772330043E5EE /* AddCustomerTableViewCellController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A510E521217772330043E5EE /* AddCustomerTableViewCellController.xib */; };
 		A510E52B217772330043E5EE /* AddCustomerWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510E523217772330043E5EE /* AddCustomerWireframe.swift */; };
+		A524C6E2217DC928007477BD /* AddCustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524C6E1217DC928007477BD /* AddCustomerTableViewCell.swift */; };
+		A524C6E4217DD5E1007477BD /* AddCustomerDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A524C6E3217DD5E1007477BD /* AddCustomerDetails.storyboard */; };
+		A524C6E6217DD665007477BD /* AddCustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524C6E5217DD665007477BD /* AddCustomerTableViewController.swift */; };
 		A563E1FD2178857E00AF74AB /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A563E1FC2178857E00AF74AB /* ResponseHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,8 +93,11 @@
 		A510E51E217772330043E5EE /* AddCustomerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerPresenter.swift; sourceTree = "<group>"; };
 		A510E51F217772330043E5EE /* AddCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerViewController.swift; sourceTree = "<group>"; };
 		A510E520217772330043E5EE /* AddCustomerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerInteractor.swift; sourceTree = "<group>"; };
-		A510E521217772330043E5EE /* AddCustomerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCustomerViewController.xib; sourceTree = "<group>"; };
+		A510E521217772330043E5EE /* AddCustomerTableViewCellController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCustomerTableViewCellController.xib; sourceTree = "<group>"; };
 		A510E523217772330043E5EE /* AddCustomerWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerWireframe.swift; sourceTree = "<group>"; };
+		A524C6E1217DC928007477BD /* AddCustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerTableViewCell.swift; sourceTree = "<group>"; };
+		A524C6E3217DD5E1007477BD /* AddCustomerDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCustomerDetails.storyboard; sourceTree = "<group>"; };
+		A524C6E5217DD665007477BD /* AddCustomerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerTableViewController.swift; sourceTree = "<group>"; };
 		A563E1FC2178857E00AF74AB /* ResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,7 +208,6 @@
 		A50C521E217628D200D52EB2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A50C521F2176291100D52EB2 /* CustomerProfile.swift */,
 				A50C52212176293100D52EB2 /* Customer.swift */,
 				A50C52232176294400D52EB2 /* Car.swift */,
 				A50C52252176295B00D52EB2 /* Address.swift */,
@@ -213,6 +218,7 @@
 		A50C52272176296900D52EB2 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
+				A50C521F2176291100D52EB2 /* CustomerProfile.swift */,
 				A50C52282176297E00D52EB2 /* APIs.swift */,
 				A50C522A217629C500D52EB2 /* EndpointInteractor.swift */,
 				A563E1FC2178857E00AF74AB /* ResponseHandler.swift */,
@@ -228,8 +234,11 @@
 				A510E51E217772330043E5EE /* AddCustomerPresenter.swift */,
 				A510E51F217772330043E5EE /* AddCustomerViewController.swift */,
 				A510E520217772330043E5EE /* AddCustomerInteractor.swift */,
-				A510E521217772330043E5EE /* AddCustomerViewController.xib */,
+				A510E521217772330043E5EE /* AddCustomerTableViewCellController.xib */,
 				A510E523217772330043E5EE /* AddCustomerWireframe.swift */,
+				A524C6E1217DC928007477BD /* AddCustomerTableViewCell.swift */,
+				A524C6E3217DD5E1007477BD /* AddCustomerDetails.storyboard */,
+				A524C6E5217DD665007477BD /* AddCustomerTableViewController.swift */,
 			);
 			path = AddCustomer;
 			sourceTree = "<group>";
@@ -341,7 +350,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A510E529217772330043E5EE /* AddCustomerViewController.xib in Resources */,
+				A510E529217772330043E5EE /* AddCustomerTableViewCellController.xib in Resources */,
+				A524C6E4217DD5E1007477BD /* AddCustomerDetails.storyboard in Resources */,
 				A50C51E32176247B00D52EB2 /* LaunchScreen.storyboard in Resources */,
 				A50C51E02176247B00D52EB2 /* Assets.xcassets in Resources */,
 				A50C51DE2176247A00D52EB2 /* Main.storyboard in Resources */,
@@ -378,7 +388,9 @@
 				A50C52242176294400D52EB2 /* Car.swift in Sources */,
 				A50C52182176280E00D52EB2 /* CustomerListWireframe.swift in Sources */,
 				A50C52262176295B00D52EB2 /* Address.swift in Sources */,
+				A524C6E2217DC928007477BD /* AddCustomerTableViewCell.swift in Sources */,
 				A50C52152176280E00D52EB2 /* CustomerListInteractor.swift in Sources */,
+				A524C6E6217DD665007477BD /* AddCustomerTableViewController.swift in Sources */,
 				A510E52B217772330043E5EE /* AddCustomerWireframe.swift in Sources */,
 				A50C521B2176287300D52EB2 /* EventHandler.swift in Sources */,
 				A50C51D92176247A00D52EB2 /* AppDelegate.swift in Sources */,

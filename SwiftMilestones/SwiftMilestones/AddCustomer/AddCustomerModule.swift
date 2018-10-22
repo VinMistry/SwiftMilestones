@@ -20,13 +20,15 @@ class AddCustomerModule {
         
         let presenter = AddCustomerPresenter(wireframe: wireframe, interactor: interactor)
         
-        let viewController = AddCustomerViewController(eventHandler: presenter)
+        let vc = UIStoryboard(name: "AddCustomerDetails", bundle: nil).instantiateViewController(withIdentifier: "addTable") as! AddCustomerTableViewController
         
-        presenter.view = viewController
+        vc.eventHandler = presenter
+        
+        presenter.view = vc
         interactor.output = presenter
-        wireframe.viewController = viewController
+        wireframe.viewController = vc
         wireframe.output = presenter
         
-        return viewController
+        return vc
     }
 }
