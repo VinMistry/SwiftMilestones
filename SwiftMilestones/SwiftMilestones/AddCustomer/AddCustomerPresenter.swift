@@ -28,6 +28,10 @@ class AddCustomerPresenter {
 }
 
 extension AddCustomerPresenter: AddCustomerEventHandler {
+    func cancelButtonTapped() {
+        wireframe.dismiss()
+    }
+    
     func addPersonButtonTapped() {
         interactor.addProfileToDB(customerProfile: view!.getProfileFromFields())
     }

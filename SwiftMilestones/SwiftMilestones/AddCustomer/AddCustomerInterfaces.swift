@@ -14,6 +14,7 @@ protocol AddCustomerView: class {
 
 protocol AddCustomerEventHandler: EventHandler {
     func addPersonButtonTapped()
+    func cancelButtonTapped()
 }
 
 protocol AddCustomerInteractorInput: class {

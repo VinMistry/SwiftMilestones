@@ -54,7 +54,7 @@ class AddCustomerTableViewController: UITableViewController {
     }
     
     @objc func cancelButtonTapped() {
-       
+       eventHandler.cancelButtonTapped()
     }
 }
 
