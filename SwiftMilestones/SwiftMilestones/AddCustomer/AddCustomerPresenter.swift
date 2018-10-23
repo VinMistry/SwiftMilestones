@@ -28,10 +28,20 @@ class AddCustomerPresenter {
 }
 
 extension AddCustomerPresenter: AddCustomerEventHandler {
-    
+    func addPersonButtonTapped() {
+        interactor.addProfileToDB(customerProfile: view!.getProfileFromFields())
+    }
 }
 
 extension AddCustomerPresenter: AddCustomerInteractorOutput {
+    func profileAddedToDB(customerID: String) {
+        
+    }
+    
+    func profileFailedToAddToDB() {
+        
+    }
+    
     
 }
 

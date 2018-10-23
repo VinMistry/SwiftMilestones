@@ -9,19 +9,20 @@
 import Foundation
 
 protocol AddCustomerView: class {
-
+    func getProfileFromFields() -> CustomerProfile
 }
 
 protocol AddCustomerEventHandler: EventHandler {
-
+    func addPersonButtonTapped()
 }
 
 protocol AddCustomerInteractorInput: class {
-    
+    func addProfileToDB(customerProfile: CustomerProfile)
 }
 
 protocol AddCustomerInteractorOutput: class {
-    
+    func profileAddedToDB(customerID: String)
+    func profileFailedToAddToDB()
 }
 
 protocol AddCustomerWireframeInput: Wireframe {

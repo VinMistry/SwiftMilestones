@@ -12,4 +12,12 @@ class AddCustomerInteractor: AddCustomerInteractorInput {
    
     weak var output: AddCustomerInteractorOutput?
     
+    func addProfileToDB(customerProfile: CustomerProfile) {
+      let response =  EndpointInteractor().addProfile(customerProfile: customerProfile)
+        if response.responseCode == 200 {
+            output?.profileAddedToDB(customerID: response.customerID)
+        }
+    }
+    
+
 }
