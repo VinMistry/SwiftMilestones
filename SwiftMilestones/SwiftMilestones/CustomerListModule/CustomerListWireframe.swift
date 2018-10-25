@@ -22,8 +22,8 @@ class CustomerListWireframe: CustomerListWireframeInput {
         viewController?.present(UINavigationController(rootViewController: AddCustomerModule().build()), animated: true, completion: nil)
     }
     
-    func customerListReturnedEmpty(alertTitle title: String, alertText text: String) {
-        presentAlert(alertTitle: title, alertText: text)
+    func customerListReturnedEmpty(imageName: String, alertTitle title: String, alertText text: String) {
+        presentAlert(imageName: imageName,alertTitle: title, alertText: text)
     }
     
 }

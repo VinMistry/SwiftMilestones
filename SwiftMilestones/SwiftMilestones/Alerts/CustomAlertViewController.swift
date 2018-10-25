@@ -18,10 +18,11 @@ class CustomAlertViewController: UIViewController {
     
     let alertTitle: String
     let alertText: String
-    
-    init(alertTitle: String, alertText: String) {
+    let alertImageName: String
+    init(imageName: String, alertTitle: String, alertText: String) {
         self.alertTitle = alertTitle
         self.alertText = alertText
+        self.alertImageName = imageName
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,7 +34,7 @@ class CustomAlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        alertImageView.loadGif(name: "giphy")
+        alertImageView.loadGif(name: alertImageName)
         alertTitleTextLabel.text = alertTitle
         alertBodyTextLabel.text = alertText
         

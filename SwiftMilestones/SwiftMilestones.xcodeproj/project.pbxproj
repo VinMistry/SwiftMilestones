@@ -40,10 +40,12 @@
 		A588865221805FFC00C24BE6 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588865021805FFC00C24BE6 /* CustomAlertViewController.swift */; };
 		A588865321805FFC00C24BE6 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A588865121805FFC00C24BE6 /* CustomAlertViewController.xib */; };
 		A58886562180909300C24BE6 /* GIFHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58886552180909300C24BE6 /* GIFHandler.swift */; };
-		A58886582180923300C24BE6 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = A58886572180923300C24BE6 /* giphy.gif */; };
+		A58886582180923300C24BE6 /* thisIsFine.gif in Resources */ = {isa = PBXBuildFile; fileRef = A58886572180923300C24BE6 /* thisIsFine.gif */; };
 		A588865A2181C75D00C24BE6 /* ValidationForProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58886592181C75D00C24BE6 /* ValidationForProfiles.swift */; };
 		A588865D2181CA7D00C24BE6 /* Completed .swift in Sources */ = {isa = PBXBuildFile; fileRef = A588865C2181CA7D00C24BE6 /* Completed .swift */; };
 		A588865F2181CB1000C24BE6 /* ProfileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588865E2181CB1000C24BE6 /* ProfileValidator.swift */; };
+		A58886612181FDAF00C24BE6 /* AlertImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58886602181FDAF00C24BE6 /* AlertImages.swift */; };
+		A58886632181FECC00C24BE6 /* unacceptable.gif in Resources */ = {isa = PBXBuildFile; fileRef = A58886622181FECC00C24BE6 /* unacceptable.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,10 +105,12 @@
 		A588865021805FFC00C24BE6 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		A588865121805FFC00C24BE6 /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
 		A58886552180909300C24BE6 /* GIFHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFHandler.swift; sourceTree = "<group>"; };
-		A58886572180923300C24BE6 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = giphy.gif; path = ../../../../../Desktop/giphy.gif; sourceTree = "<group>"; };
+		A58886572180923300C24BE6 /* thisIsFine.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = thisIsFine.gif; path = ../../../../../Desktop/thisIsFine.gif; sourceTree = "<group>"; };
 		A58886592181C75D00C24BE6 /* ValidationForProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationForProfiles.swift; sourceTree = "<group>"; };
 		A588865C2181CA7D00C24BE6 /* Completed .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Completed .swift"; sourceTree = "<group>"; };
 		A588865E2181CB1000C24BE6 /* ProfileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileValidator.swift; sourceTree = "<group>"; };
+		A58886602181FDAF00C24BE6 /* AlertImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImages.swift; sourceTree = "<group>"; };
+		A58886622181FECC00C24BE6 /* unacceptable.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = unacceptable.gif; path = ../../../../../Desktop/unacceptable.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				A588865B2181CA5700C24BE6 /* Validation */,
-				A58886572180923300C24BE6 /* giphy.gif */,
+				A58886572180923300C24BE6 /* thisIsFine.gif */,
+				A58886622181FECC00C24BE6 /* unacceptable.gif */,
 				A58886542180600A00C24BE6 /* Alerts */,
 				A510E51B217772190043E5EE /* AddCustomer */,
 				A50C52272176296900D52EB2 /* DataAccess */,
@@ -258,6 +263,7 @@
 			children = (
 				A588865021805FFC00C24BE6 /* CustomAlertViewController.swift */,
 				A588865121805FFC00C24BE6 /* CustomAlertViewController.xib */,
+				A58886602181FDAF00C24BE6 /* AlertImages.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -381,11 +387,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58886632181FECC00C24BE6 /* unacceptable.gif in Resources */,
 				A588865321805FFC00C24BE6 /* CustomAlertViewController.xib in Resources */,
 				A524C6E4217DD5E1007477BD /* AddCustomerDetails.storyboard in Resources */,
 				A50C51E32176247B00D52EB2 /* LaunchScreen.storyboard in Resources */,
 				A50C51E02176247B00D52EB2 /* Assets.xcassets in Resources */,
-				A58886582180923300C24BE6 /* giphy.gif in Resources */,
+				A58886582180923300C24BE6 /* thisIsFine.gif in Resources */,
 				A50C51DE2176247A00D52EB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +435,7 @@
 				A510E52B217772330043E5EE /* AddCustomerWireframe.swift in Sources */,
 				A50C521B2176287300D52EB2 /* EventHandler.swift in Sources */,
 				A50C51D92176247A00D52EB2 /* AppDelegate.swift in Sources */,
+				A58886612181FDAF00C24BE6 /* AlertImages.swift in Sources */,
 				A50C52112176280E00D52EB2 /* CustomerListInterfaces.swift in Sources */,
 				A510E526217772330043E5EE /* AddCustomerPresenter.swift in Sources */,
 				A50C522D217630AC00D52EB2 /* CustomerDisplayItem.swift in Sources */,

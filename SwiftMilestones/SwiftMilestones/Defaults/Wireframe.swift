@@ -15,7 +15,7 @@ protocol Wireframe: class {
     func pop(animated: Bool)
     func dismiss(animated: Bool, completion: (() -> Void)?)
     func dismiss()
-    func presentAlert(alertTitle title: String, alertText text: String)
+    func presentAlert(imageName: String, alertTitle title: String, alertText text: String)
 }
 
 extension Wireframe {
@@ -33,8 +33,8 @@ extension Wireframe {
         viewController?.dismiss(animated: animated, completion: completion)
     }
     
-    func presentAlert(alertTitle title: String, alertText text: String) {
-        let customAlert =  CustomAlertViewController(alertTitle: title, alertText: text)
+    func presentAlert(imageName: String, alertTitle title: String, alertText text: String) {
+        let customAlert =  CustomAlertViewController(imageName: imageName, alertTitle: title, alertText: text)
         customAlert.providesPresentationContextTransitionStyle = true
         customAlert.definesPresentationContext = true
         customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext

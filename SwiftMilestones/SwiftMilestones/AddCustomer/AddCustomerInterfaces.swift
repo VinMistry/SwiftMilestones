@@ -24,10 +24,11 @@ protocol AddCustomerInteractorInput: class {
 protocol AddCustomerInteractorOutput: class {
     func profileAddedToDB(customerID: String)
     func profileFailedToAddToDB()
+    func profileNotCompleted()
 }
 
 protocol AddCustomerWireframeInput: Wireframe {
-     func postRequestFailed(alertTitle title: String, alertText text: String)
+    func requestFailed(imageName: String, alertTitle title: String, alertText text: String)
 }
 
 protocol AddCustomerWireframeOutput: class {
