@@ -10,6 +10,7 @@ import UIKit
 
 class CustomerListWireframe: CustomerListWireframeInput {
     
+    
     weak var viewController: UIViewController?
     weak var output: CustomerListWireframeOutput?
     
@@ -18,12 +19,11 @@ class CustomerListWireframe: CustomerListWireframeInput {
     }
     
     func addCustomerDetails() {
-       // viewController?.navigationController?.pushViewController(AddCustomerModule().build(), animated: true)
-     
-
         viewController?.present(UINavigationController(rootViewController: AddCustomerModule().build()), animated: true, completion: nil)
-        
     }
     
+    func customerListReturnedEmpty(alertTitle title: String, alertText text: String) {
+        presentAlert(alertTitle: title, alertText: text)
+    }
     
 }

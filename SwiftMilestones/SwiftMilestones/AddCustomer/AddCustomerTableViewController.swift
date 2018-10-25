@@ -30,14 +30,15 @@ class AddCustomerTableViewController: UITableViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationController?.navigationBar.barStyle = .black
         self.navigationController?.navigationBar.isTranslucent = false
+        makeDelegateForAllTextFields()
         
-       setUpNavigationButtomItems()
+        setUpNavigationButtomItems()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
     }
     
-   private func setUpNavigationButtomItems() {
+    private func setUpNavigationButtomItems() {
         let saveBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self , action: #selector(addButtonTapped))
         saveBarButtonItem.tintColor = .green
         self.navigationItem.rightBarButtonItem = saveBarButtonItem
@@ -48,13 +49,34 @@ class AddCustomerTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+       let view = UIView()
+        view.backgroundColor = .black
+        let nameLabel = UILabel()
+        nameLabel.translatesAutoresizingMaskIntoConstraints = true
+        nameLabel.text = "Name"
+        view.addSubview(nameLabel)
+        nameLabel.frame = CGRect(x: 10, y: 5, width: nameLabel.intrinsicContentSize.width, height:  nameLabel.intrinsicContentSize.height)
+        nameLabel.textColor = .white
+        
+        return view
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
     
     @objc func addButtonTapped() {
         eventHandler.addPersonButtonTapped()
     }
     
     @objc func cancelButtonTapped() {
-       eventHandler.cancelButtonTapped()
+        eventHandler.cancelButtonTapped()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
 
@@ -64,6 +86,23 @@ extension AddCustomerTableViewController: AddCustomerView {
         let address = Address(postcode: postcodeTextField.text!, street: streetTextField.text!, city: cityTextField.text!, houseNumber: houseNumberTextField.text!)
         let car = Car(make: carMakeTextField.text!, model: carModelTextField.text!, engineSize: carEngineSizeTextField.text!, registration: carRegistrationTextField.text!)
         return CustomerProfile(customer: customer, address: address, car: car)
+    }
+    
+}
+
+extension AddCustomerTableViewController: UITextFieldDelegate {
+    
+    func makeDelegateForAllTextFields(){
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        houseNumberTextField.delegate = self
+        streetTextField.delegate = self
+        cityTextField.delegate = self
+        postcodeTextField.delegate = self
+        carMakeTextField.delegate = self
+        carModelTextField.delegate = self
+        carEngineSizeTextField.delegate = self
+        carRegistrationTextField.delegate = self
     }
     
 }

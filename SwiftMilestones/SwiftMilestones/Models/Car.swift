@@ -7,11 +7,22 @@
 //
 
 import Foundation
-public struct Car: Codable, Equatable {
+struct Car: Codable, Equatable, Completed {
+    
     var make: String
     var model: String
     var engineSize: String
     var registration: String
     
+    func isComplete() -> Bool {
+        if make.isEmpty || model.isEmpty || engineSize.isEmpty || registration.isEmpty{
+            return false
+        }
+        else if make == "" || model == "" || engineSize == "" || registration == "" {
+            return false
+        }
+        
+        return true 
+    }
     
 }

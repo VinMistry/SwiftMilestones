@@ -7,7 +7,15 @@
 //
 
 import Foundation
-public struct Customer: Codable, Equatable {
+struct Customer: Codable, Equatable, Completed {
+    
     var firstName: String
     var lastName: String
+    
+    func isComplete() -> Bool {
+        if firstName.isEmpty || lastName.isEmpty || firstName == "" || lastName == "" {
+            return false
+        }
+        return true
+    }
 }

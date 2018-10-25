@@ -9,11 +9,17 @@
 import UIKit
 
 class CustomerListInteractor: CustomerListInteractorInput {
-
+    
     weak var output: CustomerListInteractorOutput?
     let endpointInteractor =  EndpointInteractor()
     
     func fetchCustomerProfiles() {
-            output?.fetchedCustomerProfiles(customerProfile: endpointInteractor.retrieveProfiles())
+        let customerProfiles = endpointInteractor.retrieveProfiles()
+        if customerProfiles.isEmpty {
+            output?.customerProfileFetchFailed()
+        }
+        else {
+            output?.fetchedCustomerProfiles(customerProfile: customerProfiles)
+        }
     }
 }

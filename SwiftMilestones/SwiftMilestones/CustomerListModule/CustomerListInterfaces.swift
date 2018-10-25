@@ -31,6 +31,7 @@ protocol CustomerListInteractorOutput: class {
 protocol CustomerListWireframeInput: Wireframe {
     func showCustomerDetails()
     func addCustomerDetails()
+    func customerListReturnedEmpty(alertTitle title: String, alertText text: String)
 }
 
 protocol CustomerListWireframeOutput: class {

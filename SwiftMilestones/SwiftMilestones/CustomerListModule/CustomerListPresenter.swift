@@ -49,7 +49,7 @@ extension CustomerListPresenter: CustomerListInteractorOutput {
     }
     
     func customerProfileFetchFailed() {
-        
+        wireframe.customerListReturnedEmpty(alertTitle: "No Profiles Found", alertText: "No profiles returned from the database")
     }
     
     

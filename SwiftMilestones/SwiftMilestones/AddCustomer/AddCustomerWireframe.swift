@@ -13,4 +13,9 @@ class AddCustomerWireframe: AddCustomerWireframeInput {
     weak var viewController: UIViewController?
     weak var output: AddCustomerWireframeOutput?
     
+    func postRequestFailed(alertTitle title: String, alertText text: String)
+    {
+      presentAlert(alertTitle: title, alertText: text)
+    }
+    
 }

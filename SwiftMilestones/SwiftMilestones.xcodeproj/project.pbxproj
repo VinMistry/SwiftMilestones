@@ -37,6 +37,13 @@
 		A524C6E4217DD5E1007477BD /* AddCustomerDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A524C6E3217DD5E1007477BD /* AddCustomerDetails.storyboard */; };
 		A524C6E6217DD665007477BD /* AddCustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524C6E5217DD665007477BD /* AddCustomerTableViewController.swift */; };
 		A563E1FD2178857E00AF74AB /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A563E1FC2178857E00AF74AB /* ResponseHandler.swift */; };
+		A588865221805FFC00C24BE6 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588865021805FFC00C24BE6 /* CustomAlertViewController.swift */; };
+		A588865321805FFC00C24BE6 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A588865121805FFC00C24BE6 /* CustomAlertViewController.xib */; };
+		A58886562180909300C24BE6 /* GIFHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58886552180909300C24BE6 /* GIFHandler.swift */; };
+		A58886582180923300C24BE6 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = A58886572180923300C24BE6 /* giphy.gif */; };
+		A588865A2181C75D00C24BE6 /* ValidationForProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58886592181C75D00C24BE6 /* ValidationForProfiles.swift */; };
+		A588865D2181CA7D00C24BE6 /* Completed .swift in Sources */ = {isa = PBXBuildFile; fileRef = A588865C2181CA7D00C24BE6 /* Completed .swift */; };
+		A588865F2181CB1000C24BE6 /* ProfileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588865E2181CB1000C24BE6 /* ProfileValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +100,13 @@
 		A524C6E3217DD5E1007477BD /* AddCustomerDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCustomerDetails.storyboard; sourceTree = "<group>"; };
 		A524C6E5217DD665007477BD /* AddCustomerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerTableViewController.swift; sourceTree = "<group>"; };
 		A563E1FC2178857E00AF74AB /* ResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
+		A588865021805FFC00C24BE6 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		A588865121805FFC00C24BE6 /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
+		A58886552180909300C24BE6 /* GIFHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFHandler.swift; sourceTree = "<group>"; };
+		A58886572180923300C24BE6 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = giphy.gif; path = ../../../../../Desktop/giphy.gif; sourceTree = "<group>"; };
+		A58886592181C75D00C24BE6 /* ValidationForProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationForProfiles.swift; sourceTree = "<group>"; };
+		A588865C2181CA7D00C24BE6 /* Completed .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Completed .swift"; sourceTree = "<group>"; };
+		A588865E2181CB1000C24BE6 /* ProfileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +157,9 @@
 		A50C51D72176247A00D52EB2 /* SwiftMilestones */ = {
 			isa = PBXGroup;
 			children = (
+				A588865B2181CA5700C24BE6 /* Validation */,
+				A58886572180923300C24BE6 /* giphy.gif */,
+				A58886542180600A00C24BE6 /* Alerts */,
 				A510E51B217772190043E5EE /* AddCustomer */,
 				A50C52272176296900D52EB2 /* DataAccess */,
 				A50C521E217628D200D52EB2 /* Models */,
@@ -163,6 +180,7 @@
 			children = (
 				A50C51ED2176247B00D52EB2 /* SwiftMilestonesTests.swift */,
 				A50C51EF2176247B00D52EB2 /* Info.plist */,
+				A58886592181C75D00C24BE6 /* ValidationForProfiles.swift */,
 			);
 			path = SwiftMilestonesTests;
 			sourceTree = "<group>";
@@ -195,6 +213,7 @@
 			children = (
 				A50C521A2176287300D52EB2 /* EventHandler.swift */,
 				A50C521C2176289800D52EB2 /* Wireframe.swift */,
+				A58886552180909300C24BE6 /* GIFHandler.swift */,
 			);
 			path = Defaults;
 			sourceTree = "<group>";
@@ -202,6 +221,7 @@
 		A50C521E217628D200D52EB2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A50C521F2176291100D52EB2 /* CustomerProfile.swift */,
 				A50C52212176293100D52EB2 /* Customer.swift */,
 				A50C52232176294400D52EB2 /* Car.swift */,
 				A50C52252176295B00D52EB2 /* Address.swift */,
@@ -212,7 +232,6 @@
 		A50C52272176296900D52EB2 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
-				A50C521F2176291100D52EB2 /* CustomerProfile.swift */,
 				A50C52282176297E00D52EB2 /* APIs.swift */,
 				A50C522A217629C500D52EB2 /* EndpointInteractor.swift */,
 				A563E1FC2178857E00AF74AB /* ResponseHandler.swift */,
@@ -232,6 +251,24 @@
 				A524C6E3217DD5E1007477BD /* AddCustomerDetails.storyboard */,
 			);
 			path = AddCustomer;
+			sourceTree = "<group>";
+		};
+		A58886542180600A00C24BE6 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				A588865021805FFC00C24BE6 /* CustomAlertViewController.swift */,
+				A588865121805FFC00C24BE6 /* CustomAlertViewController.xib */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		A588865B2181CA5700C24BE6 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				A588865C2181CA7D00C24BE6 /* Completed .swift */,
+				A588865E2181CB1000C24BE6 /* ProfileValidator.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +333,9 @@
 		A50C51CD2176247A00D52EB2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					noInternet,
+				);
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Vinesh Mistry";
@@ -341,9 +381,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A588865321805FFC00C24BE6 /* CustomAlertViewController.xib in Resources */,
 				A524C6E4217DD5E1007477BD /* AddCustomerDetails.storyboard in Resources */,
 				A50C51E32176247B00D52EB2 /* LaunchScreen.storyboard in Resources */,
 				A50C51E02176247B00D52EB2 /* Assets.xcassets in Resources */,
+				A58886582180923300C24BE6 /* giphy.gif in Resources */,
 				A50C51DE2176247A00D52EB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,10 +418,13 @@
 				A50C52222176293100D52EB2 /* Customer.swift in Sources */,
 				A563E1FD2178857E00AF74AB /* ResponseHandler.swift in Sources */,
 				A50C52242176294400D52EB2 /* Car.swift in Sources */,
+				A58886562180909300C24BE6 /* GIFHandler.swift in Sources */,
 				A50C52182176280E00D52EB2 /* CustomerListWireframe.swift in Sources */,
+				A588865D2181CA7D00C24BE6 /* Completed .swift in Sources */,
 				A50C52262176295B00D52EB2 /* Address.swift in Sources */,
 				A50C52152176280E00D52EB2 /* CustomerListInteractor.swift in Sources */,
 				A524C6E6217DD665007477BD /* AddCustomerTableViewController.swift in Sources */,
+				A588865221805FFC00C24BE6 /* CustomAlertViewController.swift in Sources */,
 				A510E52B217772330043E5EE /* AddCustomerWireframe.swift in Sources */,
 				A50C521B2176287300D52EB2 /* EventHandler.swift in Sources */,
 				A50C51D92176247A00D52EB2 /* AppDelegate.swift in Sources */,
@@ -390,6 +435,7 @@
 				A50C52142176280E00D52EB2 /* CustomerListViewController.swift in Sources */,
 				A50C52292176297E00D52EB2 /* APIs.swift in Sources */,
 				A510E528217772330043E5EE /* AddCustomerInteractor.swift in Sources */,
+				A588865F2181CB1000C24BE6 /* ProfileValidator.swift in Sources */,
 				A50C52122176280E00D52EB2 /* CustomerListModule.swift in Sources */,
 				A50C522B217629C500D52EB2 /* EndpointInteractor.swift in Sources */,
 				A510E525217772330043E5EE /* AddCustomerModule.swift in Sources */,
@@ -400,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A588865A2181C75D00C24BE6 /* ValidationForProfiles.swift in Sources */,
 				A50C51EE2176247B00D52EB2 /* SwiftMilestonesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

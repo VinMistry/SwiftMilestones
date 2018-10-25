@@ -43,7 +43,7 @@ extension AddCustomerPresenter: AddCustomerInteractorOutput {
     }
     
     func profileFailedToAddToDB() {
-        
+        wireframe.postRequestFailed(alertTitle: "Failed To Add Profile", alertText: "Please check your connection and try again!")
     }
     
     

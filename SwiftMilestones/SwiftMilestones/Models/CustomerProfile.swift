@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public struct CustomerProfile: Codable, Equatable {
+struct CustomerProfile: Codable, Equatable {
     var customer: Customer
     var address: Address
     var car: Car
