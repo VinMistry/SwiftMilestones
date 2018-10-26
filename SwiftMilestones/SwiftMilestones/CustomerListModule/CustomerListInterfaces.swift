@@ -11,7 +11,7 @@ import Foundation
 protocol CustomerListView: class {
     func setScreenTitle(with title: String)
     func passDisplayItems(displayItems: [CustomerDisplayItem])
-
+    func profileSelected()
 }
 
 protocol CustomerListEventHandler: EventHandler {

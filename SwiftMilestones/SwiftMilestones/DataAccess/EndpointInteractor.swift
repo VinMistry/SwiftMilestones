@@ -34,12 +34,9 @@ class EndpointInteractor {
         
         do {
             let jsonData = try Data(contentsOf: url)
-            let string = String(data: jsonData, encoding: .utf8)
-            print("raw string \(string)")
             if let customers = try? JSONDecoder().decode(CustomerProfileModel.self, from: jsonData) {
                 for element in customers {
                     customerList.append(element)
-                    print(element.id)
                 }
             }
         }

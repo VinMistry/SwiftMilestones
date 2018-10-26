@@ -48,7 +48,12 @@ extension CustomerListPresenter: CustomerListInteractorOutput {
     func fetchedCustomerProfiles(customerProfile: [CustomerProfile]) {
         var profiles = [CustomerDisplayItem]()
         for profile in customerProfile {
-            profiles.append(CustomerDisplayItem(firstName: profile.customer.firstName, lastName: profile.customer.lastName))
+            if let id = profile.id {
+                profiles.append(CustomerDisplayItem(id: id, firstName: profile.customer.firstName, lastName: profile.customer.lastName))
+            }
+            else {
+                profiles.append(CustomerDisplayItem(id: nil, firstName: profile.customer.firstName, lastName: profile.customer.lastName))
+            }
         }
         view?.passDisplayItems(displayItems: profiles)
     }

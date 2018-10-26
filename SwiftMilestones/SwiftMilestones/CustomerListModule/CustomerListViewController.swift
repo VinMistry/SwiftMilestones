@@ -61,6 +61,9 @@ class CustomerListViewController: UIViewController {
 }
 
 extension CustomerListViewController: CustomerListView {
+    func profileSelected() {
+        
+    }
     
     func setScreenTitle(with title: String) {
         self.title = title
