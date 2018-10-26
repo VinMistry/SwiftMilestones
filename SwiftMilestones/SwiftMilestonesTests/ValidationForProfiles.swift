@@ -11,7 +11,7 @@ import XCTest
 
 class ValidationForProfiles: XCTestCase {
 
-    private var profileValidator: ProfileValidator?
+    private var profileValidator: Validator?
     
      private var profileWithEmptyAddressString = CustomerProfile(customer: Customer(firstName: "Chris", lastName: "Jones"), address: Address(postcode: "", street: "str", city: "cit", houseNumber: "21W"), car: Car(make: "make", model: "model", engineSize: "2", registration: "bbwwb"))
     
@@ -23,7 +23,7 @@ class ValidationForProfiles: XCTestCase {
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        profileValidator = ProfileValidator()
+        profileValidator = Validator()
     }
 
     override func tearDown() {

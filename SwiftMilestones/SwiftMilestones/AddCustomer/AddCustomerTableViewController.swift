@@ -31,10 +31,7 @@ class AddCustomerTableViewController: UITableViewController {
         self.navigationController?.navigationBar.barStyle = .black
         self.navigationController?.navigationBar.isTranslucent = false
         makeDelegateForAllTextFields()
-        
         setUpNavigationButtomItems()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         
     }
     

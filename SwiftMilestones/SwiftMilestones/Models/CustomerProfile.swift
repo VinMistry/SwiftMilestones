@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct CustomerProfile: Codable, Equatable {
+struct CustomerProfile: Codable, Equatable, Completeable{
     var id: String?
     var customer: Customer
     var address: Address
@@ -17,5 +17,12 @@ struct CustomerProfile: Codable, Equatable {
         self.customer = customer
         self.address = address
         self.car = car
+    }
+    
+    func isComplete() -> Bool {
+        if customer.isComplete() && address.isComplete() && car.isComplete() {
+            return true
+        }
+        return false
     }
 }

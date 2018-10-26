@@ -12,10 +12,10 @@ class AddCustomerInteractor: AddCustomerInteractorInput {
     
     weak var output: AddCustomerInteractorOutput?
     private let endpoint = EndpointInteractor()
-    private let profileValidator = ProfileValidator()
+    private let profileValidator = Validator()
     
     func addProfileToDB(customerProfile: CustomerProfile) {
-        if profileValidator.isProfileComplete(customerProfile: customerProfile) {
+        if profileValidator.isComplete(toValidate: customerProfile) {
             performAdd(customerProfile: customerProfile)
         }
         else {

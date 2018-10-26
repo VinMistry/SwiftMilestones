@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Completed {
+protocol Completeable {
     
     func isComplete() -> Bool
     

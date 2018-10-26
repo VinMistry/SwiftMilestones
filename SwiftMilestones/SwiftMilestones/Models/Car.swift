@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Car: Codable, Equatable, Completed {
+struct Car: Codable, Equatable, Completeable {
     
     var make: String
     var model: String

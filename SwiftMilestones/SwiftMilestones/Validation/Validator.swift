@@ -8,14 +8,14 @@
 
 import Foundation
 
-class ProfileValidator {
+class Validator {
 
     init() {
     
     }
     
-    func isProfileComplete(customerProfile: CustomerProfile) -> Bool {
-        if customerProfile.customer.isComplete() && customerProfile.address.isComplete() && customerProfile.car.isComplete() {
+    func isComplete(toValidate: Completeable) -> Bool {
+        if toValidate.isComplete() {
             return true
         }
         return false

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Customer: Codable, Equatable, Completed {
+struct Customer: Codable, Equatable, Completeable {
     
     var firstName: String
     var lastName: String

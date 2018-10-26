@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Address: Codable, Equatable, Completed{
+struct Address: Codable, Equatable, Completeable{
 
     var postcode: String
     var street: String
