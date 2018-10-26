@@ -34,6 +34,11 @@ extension CustomerListPresenter: CustomerListEventHandler {
         interactor.fetchCustomerProfiles()
     }
     
+    func viewWillAppear() {
+        interactor.fetchCustomerProfiles()
+    }
+    
+    
     func addProfileButtonTapped() {
         wireframe.addCustomerDetails()
     }

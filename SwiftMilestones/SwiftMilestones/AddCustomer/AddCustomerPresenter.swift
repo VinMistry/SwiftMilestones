@@ -39,15 +39,15 @@ extension AddCustomerPresenter: AddCustomerEventHandler {
 
 extension AddCustomerPresenter: AddCustomerInteractorOutput {
     func profileAddedToDB(customerID: String) {
-        
+        wireframe.dismiss()
     }
     
     func profileFailedToAddToDB() {
-        wireframe.requestFailed(imageName: AlertImage.somethingWentWrong.rawValue, alertTitle: "Failed To Add Profile", alertText: "Please check your connection and try again!")
+        wireframe.requestAlert(imageName: AlertImage.somethingWentWrong.rawValue, alertTitle: "Failed To Add Profile", alertText: "Please check your connection and try again!")
     }
     
     func profileNotCompleted() {
-        wireframe.requestFailed(imageName: AlertImage.incomplete.rawValue , alertTitle: "Incomplete Profile", alertText: "Please check you've filled out all the fields")
+        wireframe.requestAlert(imageName: AlertImage.incomplete.rawValue , alertTitle: "Incomplete Profile", alertText: "Please check you've filled out all the fields")
     }
     
 }

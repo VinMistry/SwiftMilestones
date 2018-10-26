@@ -28,7 +28,7 @@ protocol AddCustomerInteractorOutput: class {
 }
 
 protocol AddCustomerWireframeInput: Wireframe {
-    func requestFailed(imageName: String, alertTitle title: String, alertText text: String)
+    func requestAlert(imageName: String, alertTitle title: String, alertText text: String)
 }
 
 protocol AddCustomerWireframeOutput: class {

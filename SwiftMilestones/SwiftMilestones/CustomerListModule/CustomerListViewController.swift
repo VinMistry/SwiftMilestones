@@ -38,6 +38,8 @@ class CustomerListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        eventHandler.viewWillAppear()
+        tableView.reloadData()
     }
     
     @objc private func addTapped() {

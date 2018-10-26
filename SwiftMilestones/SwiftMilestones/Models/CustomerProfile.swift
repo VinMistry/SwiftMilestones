@@ -8,8 +8,14 @@
 
 import Foundation
 struct CustomerProfile: Codable, Equatable {
+    var id: String?
     var customer: Customer
     var address: Address
     var car: Car
     
+    init(customer: Customer, address: Address, car: Car) {
+        self.customer = customer
+        self.address = address
+        self.car = car
+    }
 }

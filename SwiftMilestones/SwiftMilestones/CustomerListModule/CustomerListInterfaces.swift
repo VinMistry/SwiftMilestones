@@ -16,6 +16,7 @@ protocol CustomerListView: class {
 
 protocol CustomerListEventHandler: EventHandler {
     func viewDidLoad()
+    func viewWillAppear()
     func addProfileButtonTapped()
 }
 

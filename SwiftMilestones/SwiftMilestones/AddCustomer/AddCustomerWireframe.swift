@@ -14,7 +14,7 @@ class AddCustomerWireframe: AddCustomerWireframeInput {
     weak var viewController: UIViewController?
     weak var output: AddCustomerWireframeOutput?
     
-    func requestFailed(imageName: String, alertTitle title: String, alertText text: String)
+    func requestAlert(imageName: String, alertTitle title: String, alertText text: String)
     {
         presentAlert(imageName: imageName, alertTitle: title, alertText: text)
     }

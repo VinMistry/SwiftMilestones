@@ -30,14 +30,16 @@ class EndpointInteractor {
     
     func retrieveProfiles() -> [CustomerProfile] {
         var customerList: [CustomerProfile] = [CustomerProfile]()
-        let url = URL(string: APIs.allProfiles.rawValue)
-        var jsonData: Data?
+        let url = URL(string: APIs.allProfiles.rawValue)!
+        
         do {
-            jsonData = try Data(contentsOf: url!)
-            if let customers = try? JSONDecoder().decode(CustomerProfileModel.self, from: jsonData!) {
+            let jsonData = try Data(contentsOf: url)
+            let string = String(data: jsonData, encoding: .utf8)
+            print("raw string \(string)")
+            if let customers = try? JSONDecoder().decode(CustomerProfileModel.self, from: jsonData) {
                 for element in customers {
                     customerList.append(element)
-                    print(element.customer.firstName)
+                    print(element.id)
                 }
             }
         }
