@@ -63,9 +63,12 @@ class EndpointInteractor {
         request.httpBody = objectAsJson
         
         let session = URLSession.shared
+        
         session.dataTask(with: request) {(data, response, error) in
             guard error == nil else {
-                completion(nil, error)
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
                 return
             }
             if let response = response as? HTTPURLResponse{
@@ -78,21 +81,18 @@ class EndpointInteractor {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
                     customerID = String(data: data , encoding: String.Encoding.utf8)!
-//                    self.responseHandler = ResponseHandler(responseCode: responseReturned, customerID: customerID)
-                    completion(ResponseHandler(responseCode: responseReturned, customerID: customerID), error)
+                    DispatchQueue.main.async {
+                        completion(ResponseHandler(responseCode: responseReturned, customerID: customerID), error)
+                    }
                 }
                 catch {
                     print(error)
-                    completion(nil, error)
+                    DispatchQueue.main.async {
+                        completion(nil, error)                        
+                    }
                 }
             }
                 
             }.resume()
-      //  run(after: 1) {
-//            print("RESPONSE RETURNED: \(responseReturned)")
-//            self.responseHandler = ResponseHandler(responseCode: responseReturned, customerID: customerID)
-//            completion(self.responseHandler, nil)
-//        }
-       
     }
 }

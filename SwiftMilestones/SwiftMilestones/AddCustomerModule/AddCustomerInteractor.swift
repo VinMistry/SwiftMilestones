@@ -16,7 +16,7 @@ class AddCustomerInteractor: AddCustomerInteractorInput {
     
     func addProfileToDB(customerProfile: CustomerProfile) {
         if profileValidator.isComplete(toValidate: customerProfile) {
-            performAdd(customerProfile: customerProfile)
+                self.performAdd(customerProfile: customerProfile)
         }
         else {
             output?.profileNotCompleted()

@@ -46,6 +46,13 @@
 		A588865F2181CB1000C24BE6 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588865E2181CB1000C24BE6 /* Validator.swift */; };
 		A58886612181FDAF00C24BE6 /* AlertImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58886602181FDAF00C24BE6 /* AlertImages.swift */; };
 		A58886632181FECC00C24BE6 /* unacceptable.gif in Resources */ = {isa = PBXBuildFile; fileRef = A58886622181FECC00C24BE6 /* unacceptable.gif */; };
+		A5BB39232187276100470FC1 /* ViewCustomerDetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB391B2187276100470FC1 /* ViewCustomerDetailsInterfaces.swift */; };
+		A5BB39242187276100470FC1 /* ViewCustomerDetailsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB391C2187276100470FC1 /* ViewCustomerDetailsModule.swift */; };
+		A5BB39252187276100470FC1 /* ViewCustomerDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB391D2187276100470FC1 /* ViewCustomerDetailsPresenter.swift */; };
+		A5BB39262187276100470FC1 /* ViewCustomerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB391E2187276100470FC1 /* ViewCustomerDetailsViewController.swift */; };
+		A5BB39272187276100470FC1 /* ViewCustomerDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB391F2187276100470FC1 /* ViewCustomerDetailsInteractor.swift */; };
+		A5BB39282187276100470FC1 /* ViewCustomerDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BB39202187276100470FC1 /* ViewCustomerDetailsViewController.xib */; };
+		A5BB392A2187276100470FC1 /* ViewCustomerDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB39222187276100470FC1 /* ViewCustomerDetailsWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +118,13 @@
 		A588865E2181CB1000C24BE6 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		A58886602181FDAF00C24BE6 /* AlertImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImages.swift; sourceTree = "<group>"; };
 		A58886622181FECC00C24BE6 /* unacceptable.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = unacceptable.gif; path = ../../../../../Desktop/unacceptable.gif; sourceTree = "<group>"; };
+		A5BB391B2187276100470FC1 /* ViewCustomerDetailsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCustomerDetailsInterfaces.swift; sourceTree = "<group>"; };
+		A5BB391C2187276100470FC1 /* ViewCustomerDetailsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCustomerDetailsModule.swift; sourceTree = "<group>"; };
+		A5BB391D2187276100470FC1 /* ViewCustomerDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCustomerDetailsPresenter.swift; sourceTree = "<group>"; };
+		A5BB391E2187276100470FC1 /* ViewCustomerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCustomerDetailsViewController.swift; sourceTree = "<group>"; };
+		A5BB391F2187276100470FC1 /* ViewCustomerDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCustomerDetailsInteractor.swift; sourceTree = "<group>"; };
+		A5BB39202187276100470FC1 /* ViewCustomerDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewCustomerDetailsViewController.xib; sourceTree = "<group>"; };
+		A5BB39222187276100470FC1 /* ViewCustomerDetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCustomerDetailsWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,11 +175,12 @@
 		A50C51D72176247A00D52EB2 /* SwiftMilestones */ = {
 			isa = PBXGroup;
 			children = (
+				A5BB391A218726FD00470FC1 /* ViewCustomerDetailsModule */,
 				A588865B2181CA5700C24BE6 /* Validation */,
 				A58886572180923300C24BE6 /* thisIsFine.gif */,
 				A58886622181FECC00C24BE6 /* unacceptable.gif */,
 				A58886542180600A00C24BE6 /* Alerts */,
-				A510E51B217772190043E5EE /* AddCustomer */,
+				A510E51B217772190043E5EE /* AddCustomerModule */,
 				A50C52272176296900D52EB2 /* DataAccess */,
 				A50C521E217628D200D52EB2 /* Models */,
 				A50C52192176285900D52EB2 /* Defaults */,
@@ -244,7 +259,7 @@
 			path = DataAccess;
 			sourceTree = "<group>";
 		};
-		A510E51B217772190043E5EE /* AddCustomer */ = {
+		A510E51B217772190043E5EE /* AddCustomerModule */ = {
 			isa = PBXGroup;
 			children = (
 				A524C6E5217DD665007477BD /* AddCustomerTableViewController.swift */,
@@ -255,7 +270,7 @@
 				A510E523217772330043E5EE /* AddCustomerWireframe.swift */,
 				A524C6E3217DD5E1007477BD /* AddCustomerDetails.storyboard */,
 			);
-			path = AddCustomer;
+			path = AddCustomerModule;
 			sourceTree = "<group>";
 		};
 		A58886542180600A00C24BE6 /* Alerts */ = {
@@ -275,6 +290,20 @@
 				A588865E2181CB1000C24BE6 /* Validator.swift */,
 			);
 			path = Validation;
+			sourceTree = "<group>";
+		};
+		A5BB391A218726FD00470FC1 /* ViewCustomerDetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+				A5BB391B2187276100470FC1 /* ViewCustomerDetailsInterfaces.swift */,
+				A5BB391C2187276100470FC1 /* ViewCustomerDetailsModule.swift */,
+				A5BB391D2187276100470FC1 /* ViewCustomerDetailsPresenter.swift */,
+				A5BB391E2187276100470FC1 /* ViewCustomerDetailsViewController.swift */,
+				A5BB391F2187276100470FC1 /* ViewCustomerDetailsInteractor.swift */,
+				A5BB39202187276100470FC1 /* ViewCustomerDetailsViewController.xib */,
+				A5BB39222187276100470FC1 /* ViewCustomerDetailsWireframe.swift */,
+			);
+			path = ViewCustomerDetailsModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BB39282187276100470FC1 /* ViewCustomerDetailsViewController.xib in Resources */,
 				A58886632181FECC00C24BE6 /* unacceptable.gif in Resources */,
 				A588865321805FFC00C24BE6 /* CustomAlertViewController.xib in Resources */,
 				A524C6E4217DD5E1007477BD /* AddCustomerDetails.storyboard in Resources */,
@@ -426,11 +456,16 @@
 				A563E1FD2178857E00AF74AB /* ResponseHandler.swift in Sources */,
 				A50C52242176294400D52EB2 /* Car.swift in Sources */,
 				A58886562180909300C24BE6 /* GIFHandler.swift in Sources */,
+				A5BB39252187276100470FC1 /* ViewCustomerDetailsPresenter.swift in Sources */,
 				A50C52182176280E00D52EB2 /* CustomerListWireframe.swift in Sources */,
 				A588865D2181CA7D00C24BE6 /* Completed .swift in Sources */,
 				A50C52262176295B00D52EB2 /* Address.swift in Sources */,
+				A5BB39232187276100470FC1 /* ViewCustomerDetailsInterfaces.swift in Sources */,
 				A50C52152176280E00D52EB2 /* CustomerListInteractor.swift in Sources */,
+				A5BB392A2187276100470FC1 /* ViewCustomerDetailsWireframe.swift in Sources */,
+				A5BB39272187276100470FC1 /* ViewCustomerDetailsInteractor.swift in Sources */,
 				A524C6E6217DD665007477BD /* AddCustomerTableViewController.swift in Sources */,
+				A5BB39242187276100470FC1 /* ViewCustomerDetailsModule.swift in Sources */,
 				A588865221805FFC00C24BE6 /* CustomAlertViewController.swift in Sources */,
 				A510E52B217772330043E5EE /* AddCustomerWireframe.swift in Sources */,
 				A50C521B2176287300D52EB2 /* EventHandler.swift in Sources */,
@@ -446,6 +481,7 @@
 				A588865F2181CB1000C24BE6 /* Validator.swift in Sources */,
 				A50C52122176280E00D52EB2 /* CustomerListModule.swift in Sources */,
 				A50C522B217629C500D52EB2 /* EndpointInteractor.swift in Sources */,
+				A5BB39262187276100470FC1 /* ViewCustomerDetailsViewController.swift in Sources */,
 				A510E525217772330043E5EE /* AddCustomerModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
