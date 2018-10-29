@@ -31,19 +31,19 @@ class ValidationForProfiles: XCTestCase {
     }
 
     func testProfileContainsEmptyAddressValue() {
-        XCTAssert(profileValidator!.isProfileComplete(customerProfile: profileWithEmptyAddressString) == false)
+        XCTAssert(profileValidator!.isComplete(toValidate: profileWithEmptyAddressString) == false)
     }
     
     func testProfileContainsEmptyNameValue() {
-        XCTAssert(profileValidator!.isProfileComplete(customerProfile: profileWithEmptyNameString) == false)
+        XCTAssert(profileValidator!.isComplete(toValidate: profileWithEmptyNameString) == false)
     }
     
     func testProfileContainsEmptyCarValue() {
-        XCTAssert(profileValidator!.isProfileComplete(customerProfile: profileWithEmptyCarString) == false)
+        XCTAssert(profileValidator!.isComplete(toValidate: profileWithEmptyCarString) == false)
     }
     
     func testProfileContainsNoEmptyValues(){
-        XCTAssert(profileValidator!.isProfileComplete(customerProfile: completeProfile) == true)
+        XCTAssert(profileValidator!.isComplete(toValidate: completeProfile) == true)
     }
 
 
