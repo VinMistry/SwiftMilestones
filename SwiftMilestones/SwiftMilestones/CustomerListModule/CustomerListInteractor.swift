@@ -11,6 +11,7 @@ import UIKit
 class CustomerListInteractor: CustomerListInteractorInput {
     
     weak var output: CustomerListInteractorOutput?
+    
     let endpointInteractor =  EndpointInteractor()
     
     func fetchCustomerProfiles() {

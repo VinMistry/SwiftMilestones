@@ -10,9 +10,11 @@ import Foundation
 
 protocol AddCustomerView: class {
     func getProfileFromFields() -> CustomerProfile
+    func setSectionHeaders(headerNames: [String])
 }
 
 protocol AddCustomerEventHandler: EventHandler {
+    func viewDidLoad()
     func addPersonButtonTapped()
     func cancelButtonTapped()
 }

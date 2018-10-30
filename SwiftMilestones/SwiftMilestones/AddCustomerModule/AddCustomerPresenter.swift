@@ -12,7 +12,7 @@ class AddCustomerPresenter {
     
     private let wireframe: AddCustomerWireframeInput
     private let interactor: AddCustomerInteractorInput
-    
+    private let sectionNames = ["Name", "Address", "Car Details"]
     let defaultWireframe: Wireframe?
     
     weak var view: AddCustomerView?
@@ -28,6 +28,11 @@ class AddCustomerPresenter {
 }
 
 extension AddCustomerPresenter: AddCustomerEventHandler {
+   
+    func viewDidLoad() {
+        view?.setSectionHeaders(headerNames: sectionNames)
+    }
+    
     func cancelButtonTapped() {
         wireframe.dismiss()
     }

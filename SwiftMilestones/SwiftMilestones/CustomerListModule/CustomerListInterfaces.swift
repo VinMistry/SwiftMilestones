@@ -11,7 +11,6 @@ import Foundation
 protocol CustomerListView: class {
     func setScreenTitle(with title: String)
     func passDisplayItems(displayItems: [CustomerDisplayItem])
-    func profileSelected()
 }
 
 protocol CustomerListEventHandler: EventHandler {
@@ -30,12 +29,10 @@ protocol CustomerListInteractorOutput: class {
 }
 
 protocol CustomerListWireframeInput: Wireframe {
-    func showCustomerDetails()
     func addCustomerDetails()
     func customerListReturnedEmpty(imageName: String, alertTitle title: String, alertText text: String)
 }
 
 protocol CustomerListWireframeOutput: class {
-    func customerProfileAdded()
 }
 

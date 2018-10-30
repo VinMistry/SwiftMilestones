@@ -33,12 +33,42 @@ class CustomerListPresenterTests: XCTestCase {
 
 fileprivate class MockCustomerListWireframe: MockWireframe, CustomerListWireframeInput {
     
+    func showCustomerDetails() {
+        
+    }
+    
+    func addCustomerDetails() {
+        
+    }
+    
+    func customerListReturnedEmpty(imageName: String, alertTitle title: String, alertText text: String) {
+        
+    }
+    
+    
 }
 
 fileprivate class MockCustomerListView: CustomerListView {
     
+    func setScreenTitle(with title: String) {
+        
+    }
+    
+    func passDisplayItems(displayItems: [CustomerDisplayItem]) {
+        
+    }
+    
+    func profileSelected() {
+        
+    }
+    
+    
 }
 
 fileprivate class MockCustomerListInteractor: CustomerListInteractorInput {
+    
+    func fetchCustomerProfiles() {
+        
+    }
     
 }

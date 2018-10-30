@@ -66,9 +66,4 @@ extension CustomerListPresenter: CustomerListInteractorOutput {
 }
 
 extension CustomerListPresenter: CustomerListWireframeOutput {
-    func customerProfileAdded() {
-        
-    }
-    
-    
 }

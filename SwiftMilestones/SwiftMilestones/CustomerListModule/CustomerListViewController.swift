@@ -9,6 +9,7 @@
 import UIKit
 
 class CustomerListViewController: UIViewController {
+    
     //MARK: Constants
     let eventHandler: CustomerListEventHandler
     let tableView = UITableView()
@@ -43,9 +44,22 @@ class CustomerListViewController: UIViewController {
     }
     
     @objc private func addTapped() {
-        print("Hello")
         eventHandler.addProfileButtonTapped()
     }
+    
+}
+
+extension CustomerListViewController: CustomerListView {
+    func setScreenTitle(with title: String) {
+        self.title = title
+    }
+    
+    func passDisplayItems(displayItems: [CustomerDisplayItem]) {
+        customerDisplayItemList =  displayItems
+    }
+}
+
+extension CustomerListViewController:  UITableViewDelegate, UITableViewDataSource  {
     
     private func setUpTableView(){
         tableView.dataSource = self
@@ -58,29 +72,15 @@ class CustomerListViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = rowHeight
     }
-}
-
-extension CustomerListViewController: CustomerListView {
-    func profileSelected() {
-        
-    }
     
-    func setScreenTitle(with title: String) {
-        self.title = title
-    }
     
-    func passDisplayItems(displayItems: [CustomerDisplayItem]) {
-        customerDisplayItemList =  displayItems
-    }
-}
-
-extension CustomerListViewController:  UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if customerDisplayItemList.isEmpty {
             return 1
         }
         return customerDisplayItemList.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()

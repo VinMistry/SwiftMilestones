@@ -55,6 +55,7 @@
 		A5BB392A2187276100470FC1 /* ViewCustomerDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB39222187276100470FC1 /* ViewCustomerDetailsWireframe.swift */; };
 		A5BB39312187582700470FC1 /* CustomerListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB392E2187582700470FC1 /* CustomerListInteractorTests.swift */; };
 		A5BB39332187582700470FC1 /* CustomerListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB39302187582700470FC1 /* CustomerListPresenterTests.swift */; };
+		A5BB39362188549600470FC1 /* MockWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB39352188549600470FC1 /* MockWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		A5BB39222187276100470FC1 /* ViewCustomerDetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCustomerDetailsWireframe.swift; sourceTree = "<group>"; };
 		A5BB392E2187582700470FC1 /* CustomerListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListInteractorTests.swift; sourceTree = "<group>"; };
 		A5BB39302187582700470FC1 /* CustomerListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListPresenterTests.swift; sourceTree = "<group>"; };
+		A5BB39352188549600470FC1 /* MockWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,8 +191,8 @@
 				A50C521E217628D200D52EB2 /* Models */,
 				A50C52192176285900D52EB2 /* Defaults */,
 				A50C5208217627DD00D52EB2 /* CustomerListModule */,
-				A50C51D82176247A00D52EB2 /* AppDelegate.swift */,
 				A50C51DA2176247A00D52EB2 /* ViewController.swift */,
+				A50C51D82176247A00D52EB2 /* AppDelegate.swift */,
 				A50C51DC2176247A00D52EB2 /* Main.storyboard */,
 				A50C51DF2176247B00D52EB2 /* Assets.xcassets */,
 				A50C51E12176247B00D52EB2 /* LaunchScreen.storyboard */,
@@ -202,6 +204,7 @@
 		A50C51EC2176247B00D52EB2 /* SwiftMilestonesTests */ = {
 			isa = PBXGroup;
 			children = (
+				A5BB39342188548200470FC1 /* Mocks */,
 				A5BB392D2187580F00470FC1 /* AddProfile */,
 				A5BB392C2187580100470FC1 /* CustomerList */,
 				A5BB392B218757E800470FC1 /* ValidationTests */,
@@ -334,6 +337,14 @@
 			children = (
 			);
 			path = AddProfile;
+			sourceTree = "<group>";
+		};
+		A5BB39342188548200470FC1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A5BB39352188549600470FC1 /* MockWireframe.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BB39362188549600470FC1 /* MockWireframe.swift in Sources */,
 				A5BB39332187582700470FC1 /* CustomerListPresenterTests.swift in Sources */,
 				A588865A2181C75D00C24BE6 /* ValidationForProfiles.swift in Sources */,
 				A50C51EE2176247B00D52EB2 /* SwiftMilestonesTests.swift in Sources */,

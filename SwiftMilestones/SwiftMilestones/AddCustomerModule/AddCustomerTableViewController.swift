@@ -11,6 +11,7 @@ import UIKit
 class AddCustomerTableViewController: UITableViewController {
     
     var eventHandler: AddCustomerEventHandler!
+    var headerNames: [String]?
     
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -32,6 +33,7 @@ class AddCustomerTableViewController: UITableViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         makeDelegateForAllTextFields()
         setUpNavigationButtomItems()
+        eventHandler.viewDidLoad()
         
     }
     
@@ -51,7 +53,8 @@ class AddCustomerTableViewController: UITableViewController {
         view.backgroundColor = .black
         let nameLabel = UILabel()
         nameLabel.translatesAutoresizingMaskIntoConstraints = true
-        nameLabel.text = "Name"
+        let sectionName = headerNames?[section] ?? ""
+        nameLabel.text = sectionName
         view.addSubview(nameLabel)
         nameLabel.frame = CGRect(x: 10, y: 5, width: nameLabel.intrinsicContentSize.width, height:  nameLabel.intrinsicContentSize.height)
         nameLabel.textColor = .white
@@ -78,6 +81,10 @@ class AddCustomerTableViewController: UITableViewController {
 }
 
 extension AddCustomerTableViewController: AddCustomerView {
+    func setSectionHeaders(headerNames: [String]) {
+        self.headerNames = headerNames
+    }
+    
     func getProfileFromFields() -> CustomerProfile {
         let customer = Customer(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!)
         let address = Address(postcode: postcodeTextField.text!, street: streetTextField.text!, city: cityTextField.text!, houseNumber: houseNumberTextField.text!)
